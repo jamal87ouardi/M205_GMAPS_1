@@ -48,6 +48,13 @@ class Triangle : AppCompatActivity() {
 
             // Centrer la caméra sur le triangle
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(point1, 18f))
+
+            val titleLocation = LatLng(32.770673753447866, -6.395977929163331)  // Coordonnée centrale du polygone
+            mMap.addMarker(
+                MarkerOptions()
+                    .position(titleLocation)
+                    .title("Café les boules")
+            )
         }
 
     }
