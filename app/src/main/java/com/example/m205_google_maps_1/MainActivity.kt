@@ -1,6 +1,8 @@
 package com.example.m205_google_maps_1
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -40,6 +42,11 @@ class MainActivity : AppCompatActivity() {
                     .title("École")
             )
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(schoolLocation, 15f))
+        }
+
+        findViewById<Button>(R.id.button).setOnClickListener{
+            val intent = Intent(this, Triangle::class.java)
+            startActivity(intent)
         }
     }
 
